@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mj7-kd-izZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="gmd-em-CYP">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" id="Mj7-kd-izZ" customClass="IntroViewController" customModule="Managing_tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8Y-he-2YQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C6-90-BRm" customClass="AmazingButton" customModule="Managing_tasks" customModuleProvider="target">
+                                <rect key="frame" x="20" y="702" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="U2d-kq-qhV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="signIn:" destination="Mj7-kd-izZ" eventType="touchUpInside" id="dx6-kZ-30l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhi-jF-hJi" customClass="AmazingButton" customModule="Managing_tasks" customModuleProvider="target">
+                                <rect key="frame" x="20" y="782" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HF6-a2-Sqg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="signUp:" destination="Mj7-kd-izZ" eventType="touchUpInside" id="bjY-pf-jKj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-T2-KBN">
+                                <rect key="frame" x="20" y="284" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5C6-90-BRm" firstAttribute="leading" secondItem="cwF-Ep-GrH" secondAttribute="leading" constant="20" id="2Lj-TX-3Lg"/>
+                            <constraint firstItem="qhi-jF-hJi" firstAttribute="leading" secondItem="cwF-Ep-GrH" secondAttribute="leading" constant="20" id="330-iD-Soc"/>
+                            <constraint firstItem="FQS-T2-KBN" firstAttribute="leading" secondItem="cwF-Ep-GrH" secondAttribute="leading" constant="20" id="5ts-sd-brm"/>
+                            <constraint firstItem="cwF-Ep-GrH" firstAttribute="trailing" secondItem="5C6-90-BRm" secondAttribute="trailing" constant="20" id="7iD-LV-0cq"/>
+                            <constraint firstItem="cwF-Ep-GrH" firstAttribute="trailing" secondItem="FQS-T2-KBN" secondAttribute="trailing" constant="20" id="J2F-qR-0xI"/>
+                            <constraint firstItem="cwF-Ep-GrH" firstAttribute="bottom" secondItem="qhi-jF-hJi" secondAttribute="bottom" constant="40" id="LMh-kD-AzQ"/>
+                            <constraint firstItem="FQS-T2-KBN" firstAttribute="top" secondItem="cwF-Ep-GrH" secondAttribute="top" constant="240" id="UIt-dM-Dad"/>
+                            <constraint firstItem="FQS-T2-KBN" firstAttribute="centerX" secondItem="e8Y-he-2YQ" secondAttribute="centerX" id="dgf-ot-XZu"/>
+                            <constraint firstItem="cwF-Ep-GrH" firstAttribute="trailing" secondItem="qhi-jF-hJi" secondAttribute="trailing" constant="20" id="e8B-8Q-Bfj"/>
+                            <constraint firstItem="qhi-jF-hJi" firstAttribute="top" secondItem="5C6-90-BRm" secondAttribute="bottom" constant="40" id="xBa-dl-RHs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cwF-Ep-GrH"/>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="5C6-90-BRm" id="Sng-TP-gZF"/>
+                        <outlet property="signUpButton" destination="qhi-jF-hJi" id="Ufx-wJ-80T"/>
+                        <outlet property="titleLabel" destination="FQS-T2-KBN" id="65W-Vr-XO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixq-6j-QhL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78" y="121"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.9.0)
+  - KeychainAccess (4.1.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - SwaggerClient (0.0.1):
+    - Alamofire (~> 4.9.0)
+
+DEPENDENCIES:
+  - KeychainAccess
+  - PromiseKit
+  - SwaggerClient (from `./Managing tasks/DevelopmentPods/swift5-client`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainAccess
+    - PromiseKit
+
+EXTERNAL SOURCES:
+  SwaggerClient:
+    :path: "./Managing tasks/DevelopmentPods/swift5-client"
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  SwaggerClient: e53730db2034aa869fe52c1c651f2489cf98e3ac
+
+PODFILE CHECKSUM: ec4c552af911b7e49f78b42559aa5308897f6cfd
+
+COCOAPODS: 1.8.4

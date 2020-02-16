@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mQf-a7-K3X">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TAW-ul-tqn">
+            <objects>
+                <navigationController id="mQf-a7-K3X" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mmJ-eQ-LOc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QJ1-tB-fDI" kind="relationship" relationship="rootViewController" id="TWg-RF-owy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n29-L3-Xd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="94"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="l2f-3I-38h">
+            <objects>
+                <viewController id="QJ1-tB-fDI" customClass="MainViewController" customModule="Managing_tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hUp-tD-tCj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Ml-YTf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="A7t-y2-rdB">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ZSM-v8-OZq"/>
+                                    <constraint firstAttribute="height" constant="40" id="g5o-YN-kn7"/>
+                                </constraints>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="A7t-y2-rdB" firstAttribute="centerY" secondItem="hUp-tD-tCj" secondAttribute="centerY" id="27j-6c-tEa"/>
+                            <constraint firstItem="dsh-Ml-YTf" firstAttribute="top" secondItem="Xj8-Nq-jS4" secondAttribute="top" id="SUV-wR-MrW"/>
+                            <constraint firstItem="A7t-y2-rdB" firstAttribute="centerX" secondItem="hUp-tD-tCj" secondAttribute="centerX" id="dkq-e8-Lmq"/>
+                            <constraint firstItem="Xj8-Nq-jS4" firstAttribute="trailing" secondItem="dsh-Ml-YTf" secondAttribute="trailing" id="g9C-ys-Wpc"/>
+                            <constraint firstItem="dsh-Ml-YTf" firstAttribute="leading" secondItem="Xj8-Nq-jS4" secondAttribute="leading" id="w8J-om-Gqc"/>
+                            <constraint firstItem="Xj8-Nq-jS4" firstAttribute="bottom" secondItem="dsh-Ml-YTf" secondAttribute="bottom" id="wqg-tf-Z2P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xj8-Nq-jS4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="45m-LT-3ro"/>
+                    <connections>
+                        <outlet property="activityAnimator" destination="A7t-y2-rdB" id="l01-Nl-mx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wt-S0-3VM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchImage" width="218" height="218"/>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZWW-ZD-Cex">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tasks View Controller-->
+        <scene sceneID="MAF-LI-b17">
+            <objects>
+                <viewController storyboardIdentifier="TasksViewController" id="ZWW-ZD-Cex" customClass="TasksViewController" customModule="Managing_tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDT-b9-Inc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-ek-q1Y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-of-sap">
+                                <rect key="frame" x="294" y="742" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1QQ-TR-nTw"/>
+                                    <constraint firstAttribute="width" constant="60" id="HV2-cI-WTn"/>
+                                </constraints>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addNewTask:" destination="ZWW-ZD-Cex" eventType="touchUpInside" id="lNs-l8-jJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OmU-ek-q1Y" firstAttribute="leading" secondItem="XjL-7V-GCT" secondAttribute="leading" id="E6U-hV-0BL"/>
+                            <constraint firstItem="XjL-7V-GCT" firstAttribute="trailing" secondItem="nVV-of-sap" secondAttribute="trailing" constant="60" id="Jb1-70-ric"/>
+                            <constraint firstItem="XjL-7V-GCT" firstAttribute="bottom" secondItem="nVV-of-sap" secondAttribute="bottom" constant="60" id="c3n-5J-yWF"/>
+                            <constraint firstItem="OmU-ek-q1Y" firstAttribute="top" secondItem="XjL-7V-GCT" secondAttribute="top" id="mWj-y2-DwA"/>
+                            <constraint firstItem="XjL-7V-GCT" firstAttribute="bottom" secondItem="OmU-ek-q1Y" secondAttribute="bottom" id="qhH-dy-G4k"/>
+                            <constraint firstItem="XjL-7V-GCT" firstAttribute="trailing" secondItem="OmU-ek-q1Y" secondAttribute="trailing" id="y52-p0-VtF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XjL-7V-GCT"/>
+                    </view>
+                    <connections>
+                        <outlet property="addTaskButton" destination="nVV-of-sap" id="rLQ-nW-8HQ"/>
+                        <outlet property="tasksTableView" destination="OmU-ek-q1Y" id="yXn-vo-1gN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BY1-EF-GMl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
