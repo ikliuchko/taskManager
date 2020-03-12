@@ -7,14 +7,13 @@
 //
 
 import PromiseKit
-import SwaggerClient
 
 class UserService {
     
     // MARK: - Properties
     
+    private let userRepository = UserRepository()
     private let userStorage = UserSecureStorage()
-    private let sessionClient = SessionClient()
     
     // MARK: - Public
     
@@ -26,50 +25,10 @@ class UserService {
     }
 
     func registerUser(with email: String, password: String) -> Promise<Void> {
-        return Promise { seal in
-            let body2 = Body2(email: email, password: password)
-
-            DefaultAPI.appHttpControllersAPIUserCreate(body: body2) { [weak self] (data, error) in
-                
-                if let error = error {
-                    return seal.reject(error)
-                }
-                
-                if let data = data,
-                    let token = data.token {
-                    self?.saveUserData(email: email, password: password, token: token)
-                    return seal.fulfill(())
-                }
-            }
-        }
-
+        userRepository.registerUser(with: email, password: password)
     }
 
     func loginUser(with email: String, password: String) -> Promise<Void> {
-        return Promise { seal in
-            let body3 = Body3(email: email, password: password)
-
-            DefaultAPI.appHttpControllersAPIUserAuth(body: body3) { [weak self] (data, error) in
-                
-                if let error = error {
-                    return seal.reject(error)
-                }
-
-                if let data = data,
-                    let token = data.token {
-                    self?.saveUserData(email: email, password: password, token: token)
-                    return seal.fulfill(())
-                }
-
-            }
-        }
-    }
-    
-    // MARK: - Private
-    
-    private func saveUserData(email: String, password: String, token: String) {
-        sessionClient.token = token
-        userStorage.saveToken(token)
-        userStorage.saveUserCredentials(email: email, password: password)
+        userRepository.loginUser(with: email, password: password)
     }
 }

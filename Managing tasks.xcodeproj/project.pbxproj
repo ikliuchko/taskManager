@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003867C8241A861E006F59E6 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003867C7241A861E006F59E6 /* UserRepository.swift */; };
+		003867CA241A883B006F59E6 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003867C9241A883B006F59E6 /* TaskRepository.swift */; };
 		0065E76A23F2FD2D0086122B /* Tasks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0065E76923F2FD2C0086122B /* Tasks.storyboard */; };
 		0065E76C23F2FD390086122B /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065E76B23F2FD390086122B /* TasksViewController.swift */; };
 		0065E76F23F2FDA30086122B /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0065E76E23F2FDA30086122B /* TaskCell.xib */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003867C7241A861E006F59E6 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		003867C9241A883B006F59E6 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		0065E76923F2FD2C0086122B /* Tasks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tasks.storyboard; sourceTree = "<group>"; };
 		0065E76B23F2FD390086122B /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		0065E76E23F2FDA30086122B /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
@@ -92,6 +96,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003867C5241A85DB006F59E6 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				00F930F923F2C20E00C5551A /* AmazingButton.swift */,
+				0085A08023F2E39600C60231 /* StoryboardLoadable.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		003867C6241A8602006F59E6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				003867C7241A861E006F59E6 /* UserRepository.swift */,
+				00DE4A5523F4A68700FCD549 /* UserSecureStorage.swift */,
+				003867C9241A883B006F59E6 /* TaskRepository.swift */,
+				00DE4A5323F44BAF00FCD549 /* SessionClient.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		0065E76D23F2FD8D0086122B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				00DE4A4F23F43CA100FCD549 /* UserService.swift */,
-				00DE4A5523F4A68700FCD549 /* UserSecureStorage.swift */,
 				00DE4A5123F448A800FCD549 /* TaskService.swift */,
-				00DE4A5323F44BAF00FCD549 /* SessionClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,6 +219,7 @@
 				0065E77223F408FC0086122B /* TaskDetails */,
 				00E45FD223F981EC004589F4 /* EditTask */,
 				00DE4A4E23F43C8700FCD549 /* Services */,
+				003867C6241A8602006F59E6 /* Repositories */,
 				00F930F823F2C1F200C5551A /* Common */,
 				00F930EC23F2BA1C00C5551A /* Info.plist */,
 				00F930E723F2BA1C00C5551A /* Assets.xcassets */,
@@ -255,8 +278,7 @@
 			children = (
 				00E45FD723F982F1004589F4 /* BO */,
 				00DE4A4A23F4121600FCD549 /* Extensions */,
-				00F930F923F2C20E00C5551A /* AmazingButton.swift */,
-				0085A08023F2E39600C60231 /* StoryboardLoadable.swift */,
+				003867C5241A85DB006F59E6 /* UIView */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -400,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003867C8241A861E006F59E6 /* UserRepository.swift in Sources */,
 				00DE4A5023F43CA100FCD549 /* UserService.swift in Sources */,
 				00DE4A5423F44BAF00FCD549 /* SessionClient.swift in Sources */,
 				00B3D8C723F9F5DE00BA8C52 /* DateFormatter+Extensions.swift in Sources */,
@@ -413,6 +436,7 @@
 				0065E77123F2FDAD0086122B /* TaskCell.swift in Sources */,
 				00DE4A5623F4A68700FCD549 /* UserSecureStorage.swift in Sources */,
 				00DE4A5A23F4BB9300FCD549 /* TaskPriority.swift in Sources */,
+				003867CA241A883B006F59E6 /* TaskRepository.swift in Sources */,
 				0065E77923F409A10086122B /* TaskDetails.swift in Sources */,
 				0095F21B23F2EBD90008A337 /* SignInViewController.swift in Sources */,
 				0085A07823F2C48B00C60231 /* IntroViewController.swift in Sources */,
